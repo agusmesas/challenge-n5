@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import Context from '../context';
 import Header from './components/Header';
 import Loading from './components/Loading';
-import SnackbarProvider from 'react-simple-snackbar'
+import { SnackbarProvider } from 'notistack';
 
 import styles from './layout.module.scss';
 import './global.css';

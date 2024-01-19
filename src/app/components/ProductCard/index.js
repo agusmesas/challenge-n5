@@ -1,7 +1,7 @@
 import styles from './style.module.scss';
 import { useContext } from 'react';
 import { useRouter } from 'next/navigation';
-import { useSnackbar } from 'react-simple-snackbar';
+import { useSnackbar } from 'notistack';
 import Link from 'next/link';
 import { ProductsContext, ProductsDispatchContext } from '../../../context/contexts';
 import Button from '../Button';
@@ -11,7 +11,7 @@ const ProductCard = (product) => {
   const router = useRouter();
   const { addToCart } = useContext(ProductsDispatchContext);
   const { shoppingCart } = useContext(ProductsContext);
-  const [openSnackbar] = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
   const { quantity = 0 } = shoppingCart?.find((cartItem) => cartItem.id === id) || {};
 
   const handleAddToCart = () => {
@@ -21,7 +21,7 @@ const ProductCard = (product) => {
     };
 
     addToCart(newProduct);
-    openSnackbar('Se agrego el producto al carrito');
+    enqueueSnackbar('Se agrego el producto al carrito');
   };
 
   const handleBuyProduct = () => {

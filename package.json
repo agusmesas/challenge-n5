@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "next": "14.0.4",
+    "notistack": "^3.0.1",
     "react": "^18",
-    "react-dom": "^18",
-    "react-simple-snackbar": "^1.1.11"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.2.0",

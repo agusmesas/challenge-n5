@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/navigation'
-import { useSnackbar } from 'react-simple-snackbar';
+import { useSnackbar } from 'notistack';
 import { ProductsContext, ProductsDispatchContext, LayoutContext } from '../../../context/contexts';
 import Quantity from '../../components/QuantityInput';
 import Button from '../../components/Button';
@@ -11,11 +11,11 @@ import styles from './page.module.scss';
 
 export default function ProductDetail({ params: { id } }) {
   const router = useRouter();
+  const { enqueueSnackbar } = useSnackbar();
   const [quantity, setQuantity] = useState(1);
   const { products, selectedProduct } = useContext(ProductsContext);
   const { setSelectedProduct, addToCart } = useContext(ProductsDispatchContext);
   const { actions: { setLoading }} = useContext(LayoutContext);
-  const [openSnackbar] = useSnackbar();
 
   const getProductDetail = () => {
     setLoading(true);
@@ -36,7 +36,7 @@ export default function ProductDetail({ params: { id } }) {
 
   const handleAddToCart = () => {
     addToCart({ ...selectedProduct, quantity });
-    openSnackbar('Se agrego el producto al carrito');
+    enqueueSnackbar('Se agrego el producto al carrito');
   }
 
   const handleBuyProduct = () => {
