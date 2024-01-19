@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import basePath from "../../config/basePath";
 
 export async function GET(request, { params: { id } }) {
-  const response = await fetch('http://localhost:3000/api/products');
+  const response = await fetch(`${basePath}/api/products`);
   const data = await response.json();
 
   return new Promise((resolve) => {
