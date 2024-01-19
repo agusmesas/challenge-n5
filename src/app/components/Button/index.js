@@ -1,6 +1,6 @@
 import styles from './style.module.scss';
 
-const Button = ({ label, onClick, disabled, type = 'primary', children }) => {
+const Button = ({ label, onClick, disabled, type = 'primary', children, className }) => {
   const handleOnClick = event => {
     event.preventDefault();
     event.stopPropagation();
@@ -9,7 +9,7 @@ const Button = ({ label, onClick, disabled, type = 'primary', children }) => {
 
   return (
     <button
-      className={`${styles.button} ${styles[`button--${type}`]}`}
+      className={`${styles.button} ${styles[`button--${type}`]} ${className}`}
       onClick={handleOnClick}
       disabled={disabled}
     >

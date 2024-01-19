@@ -37,3 +37,18 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .product {
+    flex-direction: column;
+    margin: 10px;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__detail {
+      margin-left: 0;
+    }
+  }
+}

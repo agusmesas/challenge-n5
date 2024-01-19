@@ -39,6 +39,7 @@ export default function ShoppingCart() {
                       limit={amount}
                     />
                     <Button
+                      className={styles.cart__products__item__actions__delete}
                       type="secondary"
                       onClick={() => deleteCartItem(id)}
                     >
