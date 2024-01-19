@@ -1,5 +1,9 @@
 @import '../../utils/theme.scss';
 
+.container {
+  width: 100%;
+}
+
 .input {
   background-color: $background-color-light;
   border: none;

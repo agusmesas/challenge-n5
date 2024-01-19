@@ -41,9 +41,9 @@ const AddProduct = () => {
       <div className={styles.card}>
         <h1>Agregar producto</h1>
         <form className={styles.form} onSubmit={(event) => handleSubmit(event)}>
-          <Input onChange={handleChange} name="name" placeholder="Nombre" />
-          <Input type="number" onChange={handleChange} name="price" placeholder="Precio" />
-          <Input type="number" onChange={handleChange} name="amount" placeholder="Cantidad" />
+          <Input label="Nombre" onChange={handleChange} name="name" />
+          <Input label="Precio" type="number" onChange={handleChange} name="price" />
+          <Input label="Cantidad" type="number" onChange={handleChange} name="amount" />
           <Button className={styles.card__button} label="Agregar producto" type="submit" disabled={checkDisable} />
         </form>
       </div>
