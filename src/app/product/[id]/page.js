@@ -22,6 +22,7 @@ export default function ProductDetail({ params: { id } }) {
     setLoading(true);
     fetchProductDetail(id)
     .then((response) => setSelectedProduct(response))
+    .catch(() => {router.replace('/') })
     .finally(() => setLoading(false));
   }
 
@@ -69,13 +70,13 @@ export default function ProductDetail({ params: { id } }) {
             />
             <div>
               <Button
-                type="secondary"
+                theme="secondary"
                 onClick={handleAddToCart}
                 label="Agregar al carrito"
                 disabled={!selectedProduct.amount}
               />
               <Button
-                type="primary"
+                theme="primary"
                 onClick={handleBuyProduct}
                 label="Comprar"
                 disabled={!selectedProduct.amount}

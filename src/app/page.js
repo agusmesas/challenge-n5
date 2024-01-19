@@ -1,8 +1,10 @@
 'use client'
 import { useEffect, useContext } from 'react';
+import Link from 'next/link';
 import { ProductsContext, ProductsDispatchContext, LayoutContext } from '../context/contexts';
-import ProductCard from './components/ProductCard';
 import { fetchProductsList } from './utils/services';
+import ProductCard from './components/ProductCard';
+import Button from './components/Button';
 
 import styles from './page.module.scss';
 
@@ -29,6 +31,9 @@ export default function Home () {
 
   return (
     <section className={styles.container}>
+      <Link className={styles['add-button']} href="/add-product">
+        <Button label="Agregar producto" />
+      </Link>
       <div className={styles.products}>
         {
           products?.map((product) => (

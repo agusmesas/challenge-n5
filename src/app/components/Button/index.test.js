@@ -8,7 +8,7 @@ const renderComponent = (propOverride) => {
     label: 'button text',
     onClick: jest.fn(),
     disabled: false,
-    type: 'primary',
+    theme: 'primary',
     ...propOverride,
   }
 

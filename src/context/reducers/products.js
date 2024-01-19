@@ -46,6 +46,16 @@ function productsReducer(state, action) {
       }
     }
 
+    case productsTypes.ADD_PRODUCT: {
+      return {
+        ...state,
+        products: [
+          ...state.products,
+          action.product,
+        ],
+      }
+    }
+
     default: {
       throw Error('Unknown action: ' + action.type);
     }

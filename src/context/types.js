@@ -5,6 +5,7 @@ export const productsTypes = {
   DELETE_CART_ITEM: 'products/delete-cart-item',
   SET_SELECTED_PRODUCT: 'products/set-selected-product',
   SET_PRODUCTS_LIST: 'products/set-products-list',
+  ADD_PRODUCT: 'products/add-product',
 }
 
 export const layoutTypes = {

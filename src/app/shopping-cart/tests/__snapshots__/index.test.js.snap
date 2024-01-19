@@ -6,6 +6,11 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
     class="container"
   >
     <div
+      class="back"
+    >
+      Volver
+    </div>
+    <div
       class="cart"
     >
       <h1>

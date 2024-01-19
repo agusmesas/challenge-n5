@@ -25,7 +25,9 @@ const ProductCard = (product) => {
   };
 
   const handleBuyProduct = () => {
-    handleAddToCart();
+    if(amount > quantity){
+      handleAddToCart();
+    }
 
     router.push('/shopping-cart');
   }
@@ -39,7 +41,7 @@ const ProductCard = (product) => {
       </div>
       <div className={styles.card__buttons}>
         <Button
-          type="secondary"
+          theme="secondary"
           onClick={handleAddToCart}
           disabled={!(amount > quantity)}
           label="Agregar al carrito"

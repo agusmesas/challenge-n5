@@ -52,7 +52,7 @@ export default function ShoppingCart() {
                     />
                     <Button
                       className={styles.cart__products__item__actions__delete}
-                      type="secondary"
+                      theme="secondary"
                       onClick={() => deleteCartItem(id)}
                     >
                       <Icon name="delete" color="#FFFFFF" />

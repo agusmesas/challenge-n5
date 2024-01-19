@@ -5,11 +5,15 @@ export async function GET(request, { params: { id } }) {
   const response = await fetch(`${basePath}/api/products`);
   const data = await response.json();
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, rejected) => {
     setTimeout(() => {
       const productDetail = data.find(product => product.id === Number(id));
 
-      resolve(NextResponse.json(productDetail));
+      if(productDetail){
+        resolve(NextResponse.json(productDetail));
+      } else {
+        rejected('error');
+      }
     }, 500);
   });
 }

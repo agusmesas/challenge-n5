@@ -64,6 +64,13 @@ export default function Context({ initialState, children }) {
     });
   }
 
+  function addProduct(product) {
+    productDispatch({
+      type: productsTypes.ADD_PRODUCT,
+      product
+    });
+  }
+
   function setLoading(loading) {
     layoutDispatch({
       type: layoutTypes.SET_LOADING,
@@ -78,6 +85,7 @@ export default function Context({ initialState, children }) {
     setSelectedProduct,
     setProducts,
     setInitialCart,
+    addProduct,
   };
 
   const layoutActions = {
