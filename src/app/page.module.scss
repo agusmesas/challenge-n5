@@ -19,12 +19,13 @@
 
 .add-button {
   bottom: 10px;
-  position: absolute;
+  position: fixed;
   right: 10px;
 }
 
 @media (max-width: 860px) {
   .products {
     justify-content: center;
+    padding-bottom: 60px;
   }
 }
