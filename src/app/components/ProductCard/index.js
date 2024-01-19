@@ -34,7 +34,9 @@ const ProductCard = (product) => {
 
   return (
     <Link className={styles.card} href={`/product/${id}`}>
-      <div className={styles.card__img} />
+      <div className={styles.card__img}>
+       {!amount && <p>Sin stock</p>}
+      </div>
       <div className={styles.card__title}>
         <h3>{name}</h3>
         <p>$ {price}</p>

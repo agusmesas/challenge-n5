@@ -10,9 +10,12 @@
   text-decoration: none;
 
   &__img {
+    align-items: center;
     background-color: $background-color-light;
     border-radius: 10px;
+    display: flex;
     height: 100px;
+    justify-content: center;
   }
 
   &__title {
