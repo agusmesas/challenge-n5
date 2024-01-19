@@ -1,0 +1,14 @@
+@import '../../utils/theme.scss';
+
+.loading {
+  align-items: center;
+  background-color: transparentize($color: $background-color-light, $amount: .3);
+  color: $text-secondary-color;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}

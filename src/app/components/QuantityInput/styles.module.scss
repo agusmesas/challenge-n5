@@ -1,0 +1,46 @@
+@import '../../utils/theme.scss';
+
+.quantity {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  width: max-content;
+
+  &__button {
+    background: $background-color-light;
+    border: none;
+    color: $text-secondary-color;
+    cursor: pointer;
+    font-size: 18px;
+    height: 35px;
+    padding: 10px;
+
+    &:hover {
+      background-color: darken($color: $background-color-light, $amount: 10);
+    }
+    
+    &--decrement {
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    &--increment {
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  &__input {
+    background-color: $primary-color;
+    border: none;
+    height: 35px;
+    max-width: 35px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  &__amount {
+    font-size: 12px;
+  }
+}

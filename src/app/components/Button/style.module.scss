@@ -1,0 +1,33 @@
+@import '../../utils/theme.scss';
+
+.button {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-right: 10px;
+  padding: 10px 15px;
+  
+  &--primary {
+    background-color: $primary-color;
+    color: $text-primary-color;
+
+    &:hover {
+      background-color: darken($color: $primary-color, $amount: 20%);
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: $text-secondary-color;
+
+    &:hover {
+      background-color: darken($color: $secondary-color, $amount: 50%);
+    }
+  }
+
+  &:disabled {
+    opacity: .2;
+  }
+}

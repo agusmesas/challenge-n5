@@ -1,0 +1,35 @@
+@import '../utils/theme.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart {
+  align-items: center;
+  background-color: $background-color;
+  border-radius: 10px;
+  color: $text-secondary-color;
+  margin: 10px;
+  max-width: 800px;
+  padding: 10px;
+  width: 100%;
+
+  &__products {
+    border-bottom: 3px solid $background-color-light;
+    padding: 10px;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10px 0;
+      padding: 10px;
+
+      &__actions {
+        align-items: center;
+        display: flex; 
+      }
+    }
+  }
+}

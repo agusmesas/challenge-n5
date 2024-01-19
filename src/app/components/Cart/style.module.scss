@@ -1,0 +1,27 @@
+.cart {
+  border-radius: 5px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.cart__container {
+  align-items: center;
+  background-color: #eee;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  display: flex;
+  padding: 5px;
+}
+
+.cart__container__icon {
+  height: 25px;
+}
+
+.cart_number {
+  background-color: #656565;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eee;
+  padding: 10px;
+}

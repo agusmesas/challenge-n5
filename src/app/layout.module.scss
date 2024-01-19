@@ -1,0 +1,6 @@
+@import './utils/theme.scss';
+
+.container {
+  background-color: $background-color-light;
+  height: calc(100vh - 72px);
+}

@@ -1,0 +1,17 @@
+@import '../../utils/theme.scss';
+
+.header {
+  align-items: center;
+  background-color: $background-color;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+}
+
+.header__title {
+  background-color: $background-color;
+  flex: 1;
+  text-align: center;
+}

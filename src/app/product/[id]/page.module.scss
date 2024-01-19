@@ -1,0 +1,39 @@
+@import '../../utils/theme.scss';
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.product {
+  background-color: $background-color;
+  border-radius: 10px;
+  display: flex;
+  max-width: 800px;
+  padding: 25px;
+  width: 100%;
+
+  &__img {
+    background-color: $background-color-light;
+    height: 300px;
+    width: 250px;
+  }
+
+  &__detail {
+    color: $text-secondary-color;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+
+    &__header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
