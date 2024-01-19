@@ -7,12 +7,8 @@ const iconsList = {
   delete: Delete,
 }
 
-export default function Icon({ name, color, className }) {
+export default function Icon({ name, color = '#000000', className }) {
   const IconComponent = iconsList[name];
 
   return <IconComponent className={`${styles.icon} ${className}`} color={color} />;
-}
-
-Icon.defaultProps = {
-  color: '#000000'
 }

@@ -4,7 +4,7 @@ import { waitFor, render, screen, act } from '@testing-library/react';
 import Page from '../page';
 import Context from '../../../../context';
 
-jest.mock("next/navigation", () => ({
+jest.mock('next/navigation', () => ({
   useRouter() {
     return {
       prefetch: () => null

@@ -9,9 +9,9 @@ import Button from '../Button';
 const ProductCard = (product) => {
   const { name, price, amount, id } = product;
   const router = useRouter();
+  const { enqueueSnackbar } = useSnackbar();
   const { addToCart } = useContext(ProductsDispatchContext);
   const { shoppingCart } = useContext(ProductsContext);
-  const { enqueueSnackbar } = useSnackbar();
   const { quantity = 0 } = shoppingCart?.find((cartItem) => cartItem.id === id) || {};
 
   const handleAddToCart = () => {

@@ -4,6 +4,15 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { ProductsContext, ProductsDispatchContext } from '../../../../src/context/contexts';
 import Page from '../page';
 
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      replace: jest.fn(),
+    };
+  }
+}));
+
+
 const renderComponent = () => {
   const actions = {
     addToCart: jest.fn(),

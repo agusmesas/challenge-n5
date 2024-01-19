@@ -42,7 +42,7 @@ export default function ProductDetail({ params: { id } }) {
   const handleBuyProduct = () => {
     handleAddToCart();
 
-    router.push('/shopping-cart')
+    router.replace('/shopping-cart');
   }
 
   if(selectedProduct){

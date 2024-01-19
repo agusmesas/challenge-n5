@@ -1,6 +1,13 @@
 import styles from './style.module.scss';
 
-const Button = ({ label, onClick, disabled, type = 'primary', children, className }) => {
+const Button = ({
+  label,
+  onClick,
+  disabled,
+  type = 'primary',
+  children,
+  className = '',
+}) => {
   const handleOnClick = event => {
     event.preventDefault();
     event.stopPropagation();

@@ -34,6 +34,7 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
                 </button>
                 <input
                   class="quantity__input"
+                  readonly=""
                   type="text"
                   value="12"
                 />
@@ -46,7 +47,7 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
               </div>
             </div>
             <button
-              class="button button--secondary"
+              class="button button--secondary cart__products__item__actions__delete"
             >
               <svg
                 class="icon undefined"
@@ -99,7 +100,7 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
           Total: $ 900000
         </p>
         <button
-          class="button button--primary"
+          class="button button--primary "
         >
           Comprar
         </button>

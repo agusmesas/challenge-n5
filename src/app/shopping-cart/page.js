@@ -1,5 +1,7 @@
 'use client'
 import { useContext } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSnackbar } from 'notistack';
 import { ProductsContext, ProductsDispatchContext } from '../../context/contexts';
 import Quantity from '../components/QuantityInput';
 import Button from '../components/Button';
@@ -9,6 +11,8 @@ import { calculateTotalPrice } from '../utils'
 import styles from './page.module.scss';
 
 export default function ShoppingCart() {
+  const router = useRouter();
+  const { enqueueSnackbar } = useSnackbar();
   const { shoppingCart } = useContext(ProductsContext);
   const { addToCart, buyCart, deleteCartItem } = useContext(ProductsDispatchContext);
 
@@ -22,6 +26,12 @@ export default function ShoppingCart() {
 
     addToCart(newProduct);
   };
+
+  const handleBuyCart = () => {
+    buyCart();
+    enqueueSnackbar('Se realizo la compra correctamente');
+    router.replace('/');
+  }
 
   return (
     <div className={styles.container}>
@@ -52,7 +62,7 @@ export default function ShoppingCart() {
         </div>
         <div>
           <p>Total: $ {calculateTotalPrice(shoppingCart)}</p>
-          <Button label="Comprar" onClick={buyCart} />
+          <Button label="Comprar" onClick={handleBuyCart} />
         </div>
       </div>
 
