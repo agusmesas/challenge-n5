@@ -1,6 +1,8 @@
+import { layoutTypes } from '../types';
+
 function layoutReducer(state, action) {
   switch (action.type) {
-    case 'set-loading': {
+    case layoutTypes.SET_LOADING: {
       return {
         ...state,
         loading: action.loading,

@@ -5,6 +5,8 @@ import { ProductsContext, ProductsDispatchContext, LayoutContext } from './conte
 import productsReducer from './reducers/products';
 import layoutReducer from './reducers/layout';
 
+import { productsTypes, layoutTypes } from './types';
+
 const initialState = {
   products: [],
   shoppingCart: []
@@ -31,49 +33,49 @@ export default function Context({ children }) {
 
   function setInitialCart(cart) {
     productDispatch({
-      type: 'set-initial-cart',
+      type: productsTypes.SET_INITIAL_CART,
       cart,
     });
   }
 
   function addToCart(product) {
     productDispatch({
-      type: 'add-to-cart',
+      type: productsTypes.ADD_TO_CART,
       product,
     });
   }
 
   function buyCart(product) {
     productDispatch({
-      type: 'buy-cart',
+      type: productsTypes.BUY_CART,
       product,
     });
   }
 
   function deleteCartItem(id) {
     productDispatch({
-      type: 'delete-cart-item',
+      type: productsTypes.DELETE_CART_ITEM,
       id,
     });
   }
 
   function setSelectedProduct(product) {
     productDispatch({
-      type: 'set-selected-product',
+      type: productsTypes.SET_SELECTED_PRODUCT,
       product,
     });
   }
 
   function setProducts(products) {
     productDispatch({
-      type: 'set-products-list',
+      type: productsTypes.SET_PRODUCTS_LIST,
       products
     });
   }
 
   function setLoading(loading) {
     layoutDispatch({
-      type: 'set-loading',
+      type: layoutTypes.SET_LOADING,
       loading
     });
   }

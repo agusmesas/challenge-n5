@@ -1,22 +1,23 @@
+import { productsTypes } from '../types';
 import { newProductsList, updateShoppingCart, deleteCartItem } from '../../app/utils';
 
 function productsReducer(state, action) {
   switch (action.type) {
-    case 'set-products-list': {
+    case productsTypes.SET_PRODUCTS_LIST: {
       return {
         ...state,
         products: action.products,
       }
     }
 
-    case 'add-to-cart': {
+    case productsTypes.ADD_TO_CART: {
       return {
         ...state,
         shoppingCart: updateShoppingCart(state.shoppingCart, action.product),
       };
     }
 
-    case 'buy-cart': {
+    case productsTypes.BUY_CART: {
       return {
         ...state,
         products: newProductsList(state.products, state.shoppingCart),
@@ -24,21 +25,21 @@ function productsReducer(state, action) {
       }
     }
 
-    case 'delete-cart-item': {
+    case productsTypes.DELETE_CART_ITEM: {
       return {
         ...state,
         shoppingCart: deleteCartItem(state.shoppingCart, action.id),
       }
     }
 
-    case 'set-selected-product': {
+    case productsTypes.SET_SELECTED_PRODUCT: {
       return {
         ...state,
         selectedProduct: action.product,
       }
     }
 
-    case 'set-initial-cart': {
+    case productsTypes.SET_INITIAL_CART: {
       return {
         ...state,
         shoppingCart: action.cart,
