@@ -30,11 +30,18 @@ function productsReducer(state, action) {
         shoppingCart: deleteCartItem(state.shoppingCart, action.id),
       }
     }
-    
+
     case 'set-selected-product': {
       return {
         ...state,
         selectedProduct: action.product,
+      }
+    }
+
+    case 'set-initial-cart': {
+      return {
+        ...state,
+        shoppingCart: action.cart,
       }
     }
 

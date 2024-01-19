@@ -22,12 +22,19 @@ const getInitialState = () => {
 export default function Context({ children }) {
   const [productsState, productDispatch] = useReducer(
     productsReducer,
-    getInitialState()
+    initialState,
   );
   const [layoutState, layoutDispatch] = useReducer(
     layoutReducer,
     { loading: false },
   );
+
+  function setInitialCart(cart) {
+    productDispatch({
+      type: 'set-initial-cart',
+      cart,
+    });
+  }
 
   function addToCart(product) {
     productDispatch({
@@ -77,6 +84,7 @@ export default function Context({ children }) {
     deleteCartItem,
     setSelectedProduct,
     setProducts,
+    setInitialCart,
   };
 
   const layoutActions = {

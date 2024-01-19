@@ -1,12 +1,19 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Link from 'next/link'
-import { ProductsContext } from '../../../context/contexts';
+import { ProductsContext, ProductsDispatchContext } from '../../../context/contexts';
 import Icon from '../Icon';
 
 import styles from './style.module.scss';
 
 export default function Cart() {
   const { shoppingCart } = useContext(ProductsContext);
+  const { setInitialCart } = useContext(ProductsDispatchContext);
+
+  useEffect(() => {
+    const shoppingCart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    setInitialCart(shoppingCart);
+  }, []);
   
   return (
     <Link href="/shopping-cart">
