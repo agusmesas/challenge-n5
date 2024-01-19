@@ -37,17 +37,19 @@ const ProductCard = (product) => {
         <h3>{name}</h3>
         <p>$ {price}</p>
       </div>
-      <Button
-        type="secondary"
-        onClick={handleAddToCart}
-        disabled={!(amount > quantity)}
-        label="Agregar al carrito"
-      /> 
-      <Button
-        label="Comprar"
-        disabled={!amount}
-        onClick={handleBuyProduct}
-      />
+      <div className={styles.card__buttons}>
+        <Button
+          type="secondary"
+          onClick={handleAddToCart}
+          disabled={!(amount > quantity)}
+          label="Agregar al carrito"
+        /> 
+        <Button
+          label="Comprar"
+          disabled={!amount}
+          onClick={handleBuyProduct}
+        />
+      </div>
     </Link>
   );
 }

@@ -19,4 +19,17 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 580px) {
+  .card {
+    margin: 10px;
+    max-width: unset;
+    width: 100%;
+  }
 }
