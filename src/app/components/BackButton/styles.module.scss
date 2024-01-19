@@ -1,0 +1,11 @@
+@import '../../utils/theme.scss';
+
+.back {
+  background-color: $background-color;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  color: $text-secondary-color;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 15px 40px;
+}

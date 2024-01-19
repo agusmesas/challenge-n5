@@ -1,8 +1,11 @@
 @import '../utils/theme.scss';
 
 .container {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  padding: 30px;
 }
 
 .cart {
@@ -10,13 +13,13 @@
   background-color: $background-color;
   border-radius: 10px;
   color: $text-secondary-color;
-  margin: 10px;
   max-width: 800px;
-  padding: 10px;
+  padding: 10px 20px 20px 20px;
   width: 100%;
 
   &__products {
-    border-bottom: 3px solid $background-color-light;
+    background-color: transparentize($color: $background-color-light, $amount: .8);
+    border-radius: 10px;
     padding: 10px;
 
     &__item {

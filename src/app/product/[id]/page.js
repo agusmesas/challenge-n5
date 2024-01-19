@@ -5,6 +5,7 @@ import { useSnackbar } from 'notistack';
 import { ProductsContext, ProductsDispatchContext, LayoutContext } from '../../../context/contexts';
 import Quantity from '../../components/QuantityInput';
 import Button from '../../components/Button';
+import BackButton from '../../components/BackButton';
 import { fetchProductDetail } from '../../utils/services';
 
 import styles from './page.module.scss';
@@ -48,6 +49,7 @@ export default function ProductDetail({ params: { id } }) {
   if(selectedProduct){
     return (
       <div className={styles.container}>
+        <BackButton />
         <div className={styles.product}>
           <div className={styles.product__img}/>
           <div className={styles.product__detail}>

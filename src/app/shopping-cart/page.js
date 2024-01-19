@@ -6,6 +6,7 @@ import { ProductsContext, ProductsDispatchContext } from '../../context/contexts
 import Quantity from '../components/QuantityInput';
 import Button from '../components/Button';
 import Icon from '../components/Icon';
+import BackButton from '../components/BackButton';
 import { calculateTotalPrice } from '../utils'
 
 import styles from './page.module.scss';
@@ -35,6 +36,7 @@ export default function ShoppingCart() {
 
   return (
     <div className={styles.container}>
+      <BackButton />
       <div className={styles.cart}>
         <h1>Carrito</h1>
         <div className={styles.cart__products}>
