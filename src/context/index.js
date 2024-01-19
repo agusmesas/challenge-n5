@@ -7,24 +7,15 @@ import layoutReducer from './reducers/layout';
 
 import { productsTypes, layoutTypes } from './types';
 
-const initialState = {
+const defaultState = {
   products: [],
   shoppingCart: []
 }
 
-const getInitialState = () => {
-  const shoppingCart = JSON.parse(localStorage.getItem('cart')) || [];
-
-  return {
-    ...initialState,
-    shoppingCart
-  }
-}
-
-export default function Context({ children }) {
+export default function Context({ initialState, children }) {
   const [productsState, productDispatch] = useReducer(
     productsReducer,
-    initialState,
+    initialState || defaultState,
   );
   const [layoutState, layoutDispatch] = useReducer(
     layoutReducer,

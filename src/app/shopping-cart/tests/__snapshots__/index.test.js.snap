@@ -18,7 +18,7 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
           class="cart__products__item"
         >
           <p>
-            Huevos - $ 75000 (12)
+            Huevos - $ 75000 (1)
           </p>
           <div
             class="cart__products__item__actions"
@@ -36,11 +36,10 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
                   class="quantity__input"
                   readonly=""
                   type="text"
-                  value="12"
+                  value="1"
                 />
                 <button
                   class="quantity__button quantity__button--increment"
-                  disabled=""
                 >
                   +
                 </button>
@@ -97,7 +96,7 @@ exports[`Shopping cart - Page should render cart correctly 1`] = `
       </div>
       <div>
         <p>
-          Total: $ 900000
+          Total: $ 75000
         </p>
         <button
           class="button button--primary "
